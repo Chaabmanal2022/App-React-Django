@@ -1,0 +1,118 @@
+/* Couleur de fond */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+.categories-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categories-container h2 {
+    color: #ec6c8a;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajoutez ces styles à la fin de votre fichier CSS */
+
+.category-item:hover {
+    transform: scale(1.05); /* Agrandissement de la catégorie au survol */
+    cursor: pointer; /* Change le curseur en pointeur */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'effet de survol */
+}
+
+
+.category-image {
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.category-content {
+    flex-grow: 1;
+}
+
+.category-content h3 {
+    color: #333333;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.category-content p {
+    color: #666666;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Style pour le bouton "Ajouter une categorie" */
+.add-categorie-button {
+  background-color: #FF85A1;  /* Couleur de fond assortie au thème */
+  color: white;  /* Texte en blanc */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;  /* Espace en dessous du bouton */
+  display: block;
+  width: 100%;  /* Le bouton prend toute la largeur disponible */
+  max-width: 300px;  /* Limiter la largeur du bouton */
+  margin: 20px auto;  /* Centrer le bouton */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.add-categorie-button:hover {
+  background-color: #bc405a;  /* Changer la couleur au survol */
+  transition: background-color 0.3s ease;
+}
+
+.category-item {
+    position: relative;
+    /* Autres styles existants */
+}
+
+.remove-category-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.remove-category-button:hover {
+    background-color: darkred;
+}

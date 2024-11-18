@@ -1,0 +1,130 @@
+/* RegisterForm.css */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    animation: fadeIn 1s ease-out; /* Animation pour l'apparition du container */
+}
+
+.register-form {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideUp 0.8s ease-out; /* Animation du formulaire qui glisse vers le haut */
+}
+
+.register-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    animation: fadeInText 1s ease-out; /* Animation pour l'apparition du titre */
+}
+
+/* Animation pour faire apparaître le container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation pour faire glisser le formulaire */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation pour faire apparaître le titre du formulaire */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    animation: fadeIn 0.8s ease-out; /* Animation pour chaque champ d'entrée */
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-out; /* Animation pour chaque champ d'entrée */
+}
+
+.input:focus {
+    border-color: #FF85A1;
+}
+
+.button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #bc405a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-out; /* Animation pour le bouton */
+}
+
+.message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #28a745;
+    animation: fadeInText 1s ease-out; /* Animation pour le message */
+}
+/* Style pour le wrapper de mot de passe */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Icône de masquage/affichage */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.password-strength-bar {
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+

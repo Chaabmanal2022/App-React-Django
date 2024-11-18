@@ -1,0 +1,104 @@
+/* Conteneur principal centré */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+/* Conteneur du formulaire */
+.ajouter-article-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Titre */
+.ajouter-article-container h2 {
+  text-align: center;
+  color: #ec6c8a;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Formulaire */
+.ajouter-article-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.ajouter-article-form label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Champs de saisie */
+.ajouter-article-form input[type="text"],
+.ajouter-article-form input[type="number"],
+.ajouter-article-form input[type="file"],
+.ajouter-article-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.ajouter-article-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Style au focus */
+.ajouter-article-form input[type="text"]:focus,
+.ajouter-article-form input[type="number"]:focus,
+.ajouter-article-form input[type="file"]:focus,
+.ajouter-article-form textarea:focus {
+  border-color: #FF85A1;
+}
+
+/* Bouton de soumission */
+.submit-button {
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+}
+
+/* Adaptation responsive */
+@media (max-width: 768px) {
+  .ajouter-article-container {
+    padding: 15px;
+  }
+
+  .ajouter-article-form {
+    gap: 10px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}

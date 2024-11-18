@@ -1,0 +1,271 @@
+/* Container principal pour la page des articles */
+.category-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out; /* Animation d'apparition du container */
+}
+
+/* Titre principal */
+.category-details-container h2 {
+  font-size: 28px;
+  color: #ec6c8a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #FF85A1, #BB1828);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 10px;
+  text-decoration: underline;
+  text-decoration-color: #FF85A1;
+  text-decoration-thickness: 3px;
+  animation: slideUp 1s ease-out; /* Animation du titre */
+}
+
+/* Grille pour afficher deux articles par ligne */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 colonnes, chaque colonne prend une fraction de l'espace disponible */
+  gap: 20px;  /* Espacement entre les articles */
+  opacity: 0; /* Pour commencer invisible */
+  animation: fadeInGrid 1s 0.5s forwards; /* Animation de la grille */
+}
+
+/* Style des articles */
+.article-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out; /* Transition de l'animation */
+}
+
+.article-item:hover {
+  transform: translateY(-10px); /* Léger mouvement vers le haut au survol */
+}
+
+/* Description de l'article */
+.article-item p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Image de l'article */
+.article-image {
+  max-width: 100%;
+  height: 300px;  /* Hauteur fixe de l'image */
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Animation de la grille */
+@keyframes fadeInGrid {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation du container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation du titre */
+@keyframes slideUp {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Message d'erreur */
+.error-message {
+  color: #d9534f;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeInError 1s ease-out;
+}
+
+/* Message quand aucun article n'est trouvé */
+.no-articles {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeInError 1s ease-out; /* Animation du message no-articles */
+}
+
+/* Animation pour le message d'erreur et no-articles */
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Adaptation responsive */
+@media (max-width: 768px) {
+  .article-grid {
+    grid-template-columns: 1fr;  /* Affiche une seule colonne sur les petits écrans */
+  }
+}
+
+/* Style pour le bouton "Ajouter un article" */
+.add-article-button {
+  background-color: #bc405a;  /* Couleur de fond assortie au thème */
+  color: white;  /* Texte en blanc */
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;  /* Espace en dessous du bouton */
+  display: block;
+  width: 100%;  /* Le bouton prend toute la largeur disponible */
+  max-width: 300px;  /* Limiter la largeur du bouton */
+  margin: 20px auto;  /* Centrer le bouton */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.add-article-button:hover {
+  background-color: #FF85A1;  /* Changer la couleur au survol */
+  transition: background-color 0.3s ease;
+}
+
+.article-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;              /* Pour permettre un positionnement absolu à l'intérieur */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Conteneur de la barre de recherche */
+.search-container {
+  position: relative; /* Conteneur positionné pour permettre le positionnement absolu de l'icône */
+  width: 100%;  /* Prend toute la largeur disponible */
+  max-width: 400px;  /* Limite la largeur de la barre de recherche */
+  margin: 20px auto;  /* Centre la barre de recherche et ajoute un espacement autour */
+}
+
+/* Style de la barre de recherche */
+.search-bar {
+  width: 100%;
+  padding: 10px 30px 10px 10px; /* Ajout d'un padding à droite pour l'icône */
+  border: 2px solid #BB1828;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Changer la couleur de la bordure au focus */
+.search-bar:focus {
+  outline: none;
+  border-color: #FF85A1;
+  box-shadow: 0 0 5px rgba(255, 133, 161, 0.6);
+}
+
+/* Style de l'icône de recherche */
+.search-icon {
+  position: absolute;
+  top: 50%; /* Centre l'icône verticalement */
+  right: 10px; /* Positionne l'icône à la fin de l'input */
+  transform: translateY(-50%); /* Centrer verticalement */
+  font-size: 18px; /* Taille de l'icône */
+  color: #333; /* Couleur de l'icône */
+}
+
+/* Conteneur des boutons */
+.button-group {
+  position: absolute;
+  top: 10px;          /* Aligner les boutons en haut */
+  right: 10px;        /* Aligner les boutons à droite */
+  display: flex;      /* Alignement horizontal */
+  gap: 10px;          /* Espace entre les boutons */
+}
+
+/* Styles pour le bouton Edit (déjà défini) */
+.edit-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #bb1828;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.edit-button:hover {
+  font-weight: bold;
+}
+
+.edit-button:focus {
+  outline: none;
+}
+
+.edit-button:active {
+  transform: scale(0.95);
+}
+
+/* Styles pour le bouton Delete (déjà défini) */
+.delete-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.7em;
+  cursor: pointer;
+  color: #bb1828;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+  font-weight: bold;
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
