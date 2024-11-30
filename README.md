@@ -4,8 +4,7 @@ Elle représente les articles de Féminité Chérie (bagues, montres, brumes, et
 
 **Démo**
 Voici une vidéo démontrant le fonctionnement de l'application :
-
-Visionner la vidéo de démonstration sur Google Drive
+[Voir la démo ici](https://drive.google.com/file/d/1owEAW0ImmAOW2oipapPHkQn_bggyYnOZ/view?usp=sharing)
 
 📚 **Dépendances Frontend (React)**
 Pour installer toutes les dépendances nécessaires au projet, exécutez simplement :
