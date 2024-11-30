@@ -2,6 +2,11 @@ Ce projet consiste à développer une application web utilisant Django pour le b
 L'application permet de gérer les actions CRUD (Créer, Lire, Mettre à jour, Supprimer) sur différentes entités. 
 Elle représente les articles de Féminité Chérie (bagues, montres, brumes, etc.), offrant une plateforme intuitive pour administrer et présenter ces produits.
 
+**Démo**
+Voici une vidéo démontrant le fonctionnement de l'application :
+
+Visionner la vidéo de démonstration sur Google Drive
+
 📚 **Dépendances Frontend (React)**
 Pour installer toutes les dépendances nécessaires au projet, exécutez simplement :
 • npm install
